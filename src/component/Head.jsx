@@ -7,6 +7,7 @@ import { searchApi } from "../utils/constant";
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestion, setSuggestion] = useState([]);
+  const [showSuggestion, setShowSuggestion] = useState(false);
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
     dispatch(ToggleMenu());
@@ -53,13 +54,15 @@ const Head = () => {
             onChange={(e) => {
               setSearchQuery(e.target.value);
             }}
+            onFocus={() => setShowSuggestion(true)}
+            onBlur={() => setShowSuggestion(false)}
           />
           <button className="border bg-gray-100 rounded-r-full border-gray-400 p-2  w-1/12 hover:bg-gray-300">
             🔍
           </button>
         </div>
-        <div className="">
-          <ul className=" absolute border border-gray-300  w-[32.5rem] rounded-lg  top-13 left-[26rem] bg-white flex flex-col text-left text-gray-700 gap-2  m-2">
+        {showSuggestion && (
+          <ul className=" absolute border border-gray-300  w-[32.5rem] rounded-lg left-[26rem] bg-white flex flex-col text-left text-gray-700 gap-2  m-2">
             {suggestion.map((s) => {
               return (
                 <li
@@ -71,7 +74,7 @@ const Head = () => {
               );
             })}
           </ul>
-        </div>
+        )}
       </div>
       <div className="col-span-1">
         <img
