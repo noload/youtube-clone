@@ -5,3 +5,6 @@ export const mostPopularYoutubeApi = `https://youtube.googleapis.com/youtube/v3/
 // AIzaSyDUB_5RtccBlTHPaNm8o_STCLqZRYOdCaw
 
 // https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=es&videoCategoryId=17&key=AIzaSyDUB_5RtccBlTHPaNm8o_STCLqZRYOdCaw
+
+export const searchApi =
+  "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";

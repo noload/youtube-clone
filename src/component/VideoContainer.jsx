@@ -2,19 +2,10 @@ import React, { useEffect, useState } from "react";
 import { mostPopularYoutubeApi } from "../utils/constant";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
+import useVedios from "../utils/UseVedios";
 
 const VideoContainer = () => {
-  const [videos, setVideo] = useState([]);
-
-  useEffect(() => {
-    getVideos();
-  }, []);
-
-  const getVideos = async () => {
-    const data = await fetch(mostPopularYoutubeApi);
-    const json = await data.json();
-    setVideo(json.items);
-  };
+  const [videos, setVideo] = useVedios("hello");
   return (
     <div className="flex flex-wrap">
       {videos.map((vedio) => {

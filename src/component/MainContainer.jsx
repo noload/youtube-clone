@@ -4,11 +4,11 @@ import VideoContainer from "./VideoContainer";
 
 const MainContainer = () => {
   return (
-    <div>
+    <div className="h-screen  m-4 overflow-x-auto">
       <ButtonList />
       <VideoContainer />
     </div>
   );
 };
-
+ 
 export default MainContainer;

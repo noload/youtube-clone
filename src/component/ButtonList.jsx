@@ -12,7 +12,14 @@ const ButtonList = () => {
     "Games",
     "Live",
     "Prodcast",
+    "Games",
+    "Live",
+    "Prodcast",
 
+    "Documentory",
+    "Games",
+    "Live",
+    "Prodcast",
     "Documentory",
 
     "Games",
@@ -21,11 +28,9 @@ const ButtonList = () => {
   let count = 0;
 
   return (
-    <div className="flex ">
+    <div className="flex p-7 overflow-x-auto">
       <div className="flex overscroll-x-auto">
-        <button
-          className="px-5 m-1 py-1.5 bg-gray-500 rounded-lg transition-all ease-in-out hover:bg-gray-300"
-        >
+        <button className="px-5 m-1 py-1.5 bg-gray-500 rounded-lg transition-all ease-in-out hover:bg-gray-300">
           All
         </button>
         {btnList.map((btn) => {

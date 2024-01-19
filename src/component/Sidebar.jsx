@@ -6,8 +6,8 @@ const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
   return !isMenuOpen ? null : (
-    <div className="p-5 pt-10 transition-all ease-linear duration-200 shadow-lg w-48">
-      <ul className="flex flex-col py-2 px-4 gap-1 text-gray-600 font-semibold">
+    <div className=" flex flex-col p-5 pt-10 h-screen  transition-all ease-linear duration-200 shadow-lg w-48">
+      <ul className="flex w-full flex-col py-2 px-4 gap-1 text-gray-600 font-semibold">
         <li className="transition hover:scale-105 ease-in-out">
           <Link to="/">Home</Link>
         </li>
@@ -18,7 +18,7 @@ const Sidebar = () => {
         <li>Contact</li>
       </ul>
       <h1 className="text-lg font-bold">Subscription</h1>
-      <ul className="flex flex-col py-2 px-4 gap-1 text-gray-600 font-semibold">
+      <ul className="flex flex-col w-full py-2 px-4 gap-1 text-gray-600 font-semibold">
         <li>Music</li>
         <li>Sports</li>
         <li>Gaming</li>
@@ -26,7 +26,7 @@ const Sidebar = () => {
       </ul>
 
       <h1 className="text-lg font-bold">Watch Later</h1>
-      <ul className="flex flex-col py-2 px-4 gap-1 text-gray-600 font-semibold">
+      <ul className="flex flex-col w-full py-2 px-4 gap-1 text-gray-600 font-semibold">
         <li>Music</li>
         <li>Sports</li>
         <li>Gaming</li>
