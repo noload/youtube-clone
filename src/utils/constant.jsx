@@ -8,3 +8,5 @@ export const mostPopularYoutubeApi = `https://youtube.googleapis.com/youtube/v3/
 
 export const searchApi =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+
+export const Offset_Live_Chat = 100;
